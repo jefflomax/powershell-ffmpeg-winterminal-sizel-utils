@@ -1,0 +1,21 @@
+# Ignore Visual Studio folder
+.vs/
+
+# Ignore build output
+bin/
+obj/
+
+# Ignore PowerShell-specific generated files
+*.ps1xml
+*.pssc
+*.psd1
+*.psm1
+*.ps1~
+
+# Ignore user-specific settings
+*.user
+*.suo
+
+# Ignore logs and temp files
+*.log
+*.tmp
