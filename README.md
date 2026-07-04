@@ -1,7 +1,7 @@
 # FFMpeg Utilities and helpers
 
 ## xstack builder
-Example of how to create 2 x 2 ( 4 video ) gallery with all **videos playing to the end** and all audio streams mixed and playing to the end.
+Example of how to create 2 x 2 ( 4 video ) gallery with all __**videos playing to the end**__ and all audio streams mixed and playing to the end.
 
 Makes it easier to build FFMpeg inputs for these 2x2 gallery's.
 
@@ -59,7 +59,7 @@ Example:
 
 ## cut-ffmpeg
 * Simple example of cutting a time segment out of a video
-    - .\cut-ffmpeg.ps1 -imageFile test1.mp4 -Seg1Start "" -Seg1Finish "00:00:08.000" -Seg2Start "00:00:32.500" -Seg2Finish ""
+    - .\cut-ffmpeg.ps1 \-imageFile test1.mp4 \-Seg1Start "" \-Seg1Finish "00:00:08.000" \-Seg2Start "00:00:32.500" \-Seg2Finish ""
 
 #### Assure you have FFMpeg installed
 
