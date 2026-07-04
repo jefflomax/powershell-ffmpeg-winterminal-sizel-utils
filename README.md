@@ -26,7 +26,7 @@ ffmpeg.exe
 
 Example:
 ```PowerShell
-.\ffxstack.ps1 -SharedPath "C:\temp\tv\" -F1 "video\testvideos?.mp4" -Verbose
+.\ffxstack.ps1 \-SharedPath "C:\temp\tv\" \-F1 "video\testvideos?.mp4" \-Verbose
 ```
 
 ### Supports simple RegEx video filter expansion
@@ -34,20 +34,20 @@ Example:
     - \_ENABLE\_30_60\_
     - \_NENABLE_30_60\_
     - These enable or disable 30 seconds for each 60 seconds
-        + \_ENABLE_15_60\_ produces enable=lt(mod(t\,60)\,15)
-        + \_NENABLE_15_60\_ produces enable=not(lt(mod(t\,60)\,15))
+        + \_ENABLE_15_60\_ produces enable=lt(mod(t\\,60)\\,15)
+        + \_NENABLE_15_60\_ produces enable=not(lt(mod(t\\,60)\\,15))
 * Font and PointSize filter parameters
     - \_FONT_arial_14\_  (by name without extension)
     - \_FONT_2_14\_      (by index - set your fonts in script)
     - This expands the quite long fontfile and fontsize filter parameters
-        + fontfile=C\\:/Windows/fonts/BRITANIC.ttf:fontsize=18
+        + fontfile=C\\\\:/Windows/fonts/BRITANIC.ttf:fontsize=18
 * Fontcolor filter parametere
     - \_FC_PaleGoldenRod\_ (by name)
     - \_FC_8\_             (by index - set your colors in script)
 
 ### File Input parameters F1 [SharedPath] [F2 F3 F4]
 * All support DOS wildcards (* ?)
-* \-F1 is required  -F1 "C:\temp\tv\video\testvideos?.mp4"
+* \-F1 is required  \-F1 "C:\temp\tv\video\testvideos?.mp4"
 * \-SharedPath is optional but recommended, will prepend to F1..F4 -SharedPath "C:\temp\tv\"
 * \-F2 .. \-F4 are optional
 * \-ShowCommandLineOnly $true will generate and display the FFMpeg command line
