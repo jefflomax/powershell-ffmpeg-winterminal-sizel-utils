@@ -1,7 +1,7 @@
 # FFMpeg Utilities and helpers
 
 ## xstack builder
-Example of how to create 2 x 2 ( 4 video ) gallery with all __**videos playing to the end**__ and all audio streams mixed and playing to the end.
+Example of how to create 2 x 2 ( 4 video ) gallery with all _**videos playing to the end**_ and all audio streams mixed and playing to the end.
 
 Makes it easier to build FFMpeg inputs for these 2x2 gallery's.
 
@@ -26,10 +26,10 @@ ffmpeg.exe
 
 Example:
 ```PowerShell
-.\ffxstack.ps1 \-SharedPath "C:\temp\tv\" \-F1 "video\testvideos?.mp4" \-Verbose
+.\ffxstack.ps1 -SharedPath "C:\temp\tv\" -F1 "video\testvideos?.mp4" -Verbose
 ```
 
-### Supports simple RegEx video filter expansion
+### Supports simple RegEx video filter parameter expansion
 * Time Alternation Enable filter parameter
     - \_ENABLE\_30_60\_
     - \_NENABLE_30_60\_
@@ -41,7 +41,7 @@ Example:
     - \_FONT_2_14\_      (by index - set your fonts in script)
     - This expands the quite long fontfile and fontsize filter parameters
         + fontfile=C\\\\:/Windows/fonts/BRITANIC.ttf:fontsize=18
-* Fontcolor filter parametere
+* Fontcolor filter parameter
     - \_FC_PaleGoldenRod\_ (by name)
     - \_FC_8\_             (by index - set your colors in script)
 
@@ -50,14 +50,14 @@ Example:
 * \-F1 is required  \-F1 "C:\temp\tv\video\testvideos?.mp4"
 * \-SharedPath is optional but recommended, will prepend to F1..F4 -SharedPath "C:\temp\tv\"
 * \-F2 .. \-F4 are optional
-* \-ShowCommandLineOnly $true will generate and display the FFMpeg command line
+* \-ShowCommandLineOnly $true will generate and display the FFMpeg command line but not run FFMpeg
 
 ### Video Filter customization
 * \-V0 \-V1 \-V2 \-V3 PowerShell parameters add to each video's filters
 * Example alternating V3 between edgedetect and roberts every 30 seconds with different text on each
 * \-V3="edgedetect=\_ENABLE_30_60\_, roberts=\_NENABLE_30_60\_:scale=2:delta=10, drawtext=\_ENABLE_30_60\_:\_FONT_3_18\_:text='Edge Detect':\_FC_8\_:x=10:y=10, drawtext=\_NENABLE_30_60\_:\_FONT_3_20\_:text='Roberts':\_FC_8\_:x=10:y=10 "
 
-## cut-ffmpeg
+## cut ffmpeg
 * Simple example of cutting a time segment out of a video
     - .\cut-ffmpeg.ps1 \-imageFile test1.mp4 \-Seg1Start "" \-Seg1Finish "00:00:08.000" \-Seg2Start "00:00:32.500" \-Seg2Finish ""
 
